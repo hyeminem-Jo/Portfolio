@@ -1,0 +1,153 @@
+.global-header {
+  @include flexbox;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: $header-level;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.087);
+
+  .header-wrap {
+    @include flexbox(end, center);
+    width: 100%;
+  }
+
+  .gnb {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    text-align: right;
+    padding-top: 100px;
+    background-color: #fff;
+    transform: translate3d(100%, 0, 0);
+    transition: transform .3s;
+
+    &.is-open {
+      transform: translate3d(0, 0, 0);
+      transition: transform .3s;
+    }
+
+    &-item {
+
+      // &:first-child.is-active {
+      //   a {
+      //     color: #fff;
+      //   }
+      // }
+
+      &.is-active {
+        a {
+          color: chocolate;
+          color: rgb(251, 126, 36);
+        }
+      }
+
+      a {
+
+        &:hover,
+        &:active {
+          color: red;
+        }
+
+        display: block;
+        padding: 15px 20px;
+        font-size: 18px;
+        font-family: 'Montserrat',
+        sans-serif;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .menu {
+    background-color: rgba(255, 255, 255, 0.772);
+    padding: 8px;
+    padding-bottom: 10px;
+  }
+
+  .trigger {
+    position: relative;
+    // display: none;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 0;
+
+    span {
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: #333;
+      transition: .3s;
+
+      &:first-of-type {
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+        right: 0;
+      }
+
+      &:last-of-type {
+        top: 100%;
+        left: 0;
+      }
+    }
+
+    &.is-open {
+      span:first-of-type {
+        top: 50%;
+        transform: rotate(-45deg);
+
+      }
+
+      span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      span:last-of-type {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .gnb {
+      position: static;
+      width: 100%;
+      height: 100%;
+      padding-top: 0;
+      transform: translate3d(0, 0, 0);
+      background-color: transparent;
+
+
+      &-list {
+        @include flexbox;
+      }
+    }
+
+  }
+
+  @include responsive(D) {
+    height: 100px;
+    background-color: transparent;
+    box-shadow: none;
+
+    &.is-scroll {
+      height: 70px;
+      background-color: #fff;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.087);
+    }
+
+    .gnb-list {
+      transform: translateX(50px);
+    }
+  }
+}

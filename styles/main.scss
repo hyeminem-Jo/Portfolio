@@ -1,0 +1,77 @@
+/* Please ❤ this if you like it! */
+
+@import './constants/grid';
+@import './constants/colors';
+@import './constants/breakpoints';
+@import './constants/z-indexes';
+
+@import './base/reset';
+@import './base/global';
+
+@import './mixins/flexbox';
+@import './mixins/responsive';
+@import './mixins/position';
+
+@import './components/main-visual';
+@import './components/main-about';
+
+@import './layouts/grid';
+@import './layouts/header';
+
+
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  border: 10px solid gray;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 5px;
+}
+
+section {
+  position: relative;
+  border: 1px solid;
+  padding-bottom: 60px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include responsive(T) {
+    padding-bottom: 80px;
+  }
+
+  @include responsive(D) {
+    padding-bottom: 150px;
+  }
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: rgb(251, 126, 36);
+
+  @include responsive(T) {
+    font-size: 55px;
+    margin-bottom: 50px;
+  }
+
+  @include responsive(D) {
+    font-size: 60px;
+    margin-bottom: 70px;
+  }
+}
