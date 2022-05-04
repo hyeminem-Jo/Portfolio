@@ -12,7 +12,8 @@
 @import './mixins/responsive';
 @import './mixins/position';
 
-@import './components/main-visual';
+@import './components/visual';
+@import './components/visual-content';
 @import './components/main-about';
 
 @import './layouts/grid';
@@ -26,16 +27,10 @@
   margin: 0;
 }
 
-.wrapper {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 5px;
-}
-
 section {
+  background-color: #fff;
   position: relative;
-  border: 1px solid;
+  // border: 1px solid;
   padding-bottom: 60px;
 
   &:first-of-type {
