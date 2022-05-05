@@ -1,13 +1,12 @@
 // 첫 페이지 스크롤 시 100vh 내려감
-// 첫 페이지에서 휠 감지로 100vh 내려감, 혹은 버튼을 누르면 100vh 내려감
-
-var $about = $('.main-about').offset().top;
+// 첫 페이지에서 휠 감지로 100vh 내려감
 
 // 스크롤 시 header 변경, 스크롤 버튼 사라짐
 $(window).scroll(function () {
   var st = $(this).scrollTop();
+  var $about = $('.main-about').offset().top;
 
-  if (st > $about - 70) {
+  if (st > $about - 100) {
     $('.global-header').addClass('is-scroll')
   } else {
     $('.global-header').removeClass('is-scroll')
@@ -27,16 +26,28 @@ gsap.to(".background", {
   scrollTrigger: {
     trigger: ".background",
     scrub: true
-  }, 
+  },
 });
 
 // 모바일 menu 버튼 클릭 시 gnb 등장
-$('.menu').click(function() {
+$('.menu').click(function () {
   $('.trigger, .gnb').toggleClass('is-open')
   $('.overlay').toggleClass('is-active')
 })
 
 // page-down 버튼 클릭 시 아래로 스크롤
+var $about = $('.main-about').offset().top;
 $('.page-down').click(function () {
-  $('html, body').animate({scrollTop: $about}, 1000);
+  $('html, body').animate({
+    scrollTop: ($about - 30)
+  }, 1000);
+})
+
+// skill 탭 메뉴
+$('.skill-item').click(function () {
+  $(this).addClass('is-active');
+  $(this).siblings().removeClass('is-active')
+  var tab = $(this).attr('data-alt')
+  $('#' + tab).addClass('is-active')
+  $('#' + tab).siblings().removeClass('is-active')
 })

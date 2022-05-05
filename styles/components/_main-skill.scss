@@ -1,0 +1,227 @@
+.main-skill {
+  background-color: #eee;
+
+  .skill {
+    &-wrap {
+      @include flexbox(center, stretch);
+    }
+
+    &-list {
+      @include flexbox(between);
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      @include flexbox(between, stretch);
+      min-height: 110px;
+      margin-bottom: 10px;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(5) {
+        .image {
+          img {
+            width: 75%;
+          }
+        }
+      }
+
+      .image {
+        @include column-flexbox;
+        width: 80px;
+
+        img {
+          display: block;
+          width: 80%;
+          height: auto;
+
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+
+        strong {
+          display: inline-block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      p {
+        flex: 1;
+        margin-left: 20px;
+        font-size: 15px;
+        line-height: 1.4em;
+        // color: #fff;
+      }
+    }
+
+    &-desc-item {
+      min-height: 110px;
+      margin-bottom: 10px;
+
+      p {
+        font-size: 15px;
+        line-height: 1.4em;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .skill {
+      height: 350px;
+
+      &-wrap {
+        flex-direction: column;
+      }
+
+      &-list {
+        @include flexbox(between, stretch);
+        margin-top: 0;
+        position: relative;
+      }
+
+      &-item {
+        @include flexbox(center, stretch);
+        position: relative;
+        width: 90px;
+        min-height: 90px;
+        cursor: pointer;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(5) {
+          .image {
+            img {
+              width: 95%;
+            }
+          }
+        }
+
+        &.is-active {
+          border-radius: 50%;
+          background-color: #f9e400;
+          transition: border-radius .3s;
+
+          &::after {
+            position: absolute;
+            top: calc(100% + 26px);
+            left: 30px;
+            width: 0;
+            height: 0;
+            border-left: 17px solid transparent;
+            border-right: 17px solid transparent;
+            border-bottom: 30px solid #fff;
+            content: '';
+          }
+
+          p {
+            opacity: 1;
+          }
+
+          .image {
+            img {
+              &:first-child {
+                display: block;
+              }
+
+              &:nth-child(2) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .image {
+          position: relative;
+          width: 80%;
+
+          img {
+            &:first-child {
+              display: none;
+            }
+
+            &:nth-child(2) {
+              display: block;
+            }
+
+            width: 100%;
+          }
+
+          strong {
+            @include pos-center-x;
+            // border: 1px solid red;
+            width: 100%;
+            bottom: -30px;
+            text-align: center;
+          }
+        }
+
+      }
+
+      &-desc-list {
+        position: relative;
+        min-height: 100px;
+        margin-top: 25px;
+      }
+
+      &-desc-item {
+        transition: opacity .3s;
+        opacity: 0;
+
+        &.is-active {
+          opacity: 1;
+        }
+
+        p {
+          @include pos-center-x;
+          top: 20px;
+          width: 100%;
+          margin-left: 0;
+          padding: 30px 60px;
+          transition: opacity .3s;
+          text-align: center;
+          font-size: 18px;
+          background-color: #fff;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .skill {
+      height: 390px;
+
+      &-item {
+        width: 130px;
+        height: 130px;
+
+        &.is-active {
+          &::after {
+            top: calc(100% + 50px);
+            left: 50px;
+          }
+        }
+
+        .image {
+          strong {
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &-desc-list {
+        margin-top: 50px;
+      }
+
+      &-desc-item {
+        p {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -68,7 +68,7 @@
       </div>
     </div>
   </section>
-  <div class="visual-content test">
+  <div class="visual-content">
     <div class="heading">
       <h1>hi, I'm Hyejin :)</h1>
       <h2>: web publisher portfolio</h2>
@@ -84,12 +84,16 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="content">
+            <div class="about">
               <h1 class="title">
                 About Me
               </h1>
               <div class="profile">
                 <div class="profile-image">
+                  <div class="profile-animation" aria-hidden="true">
+                    <span class="object"></span>
+                    <span class="object"></span>
+                  </div>
                   <figure class="image">
                     <img src="./images/profile2.jpg" alt="">
                     <figcaption class="visually-hidden">프로필 사진</figcaption>
@@ -105,9 +109,9 @@
                     코딩이 즐거운 <br class="md-only" /> 신입 웹퍼블리셔, <br /> 조혜진 입니다 👋
                   </h2>
                   <p>
-                    저는 코딩을 통해 웹에 표현하는 것에 매우 흥미를 느껴 웹퍼블리셔를 꿈꾸기 시작하였습니다.
-                    웹표준 및 웹접근성과 시멘틱한 마크업을 중시하고, 보다 견고하면서 사용자에게 편한 UI/UX 를 추구하는 웹퍼블리셔 입니다. <br class="sm-only" /> 또한
-                    자바스크립트를 사용한 동적인 웹 구현에 관심이 많으며, 정체 되어 있지 않고 끊임없는 발전을 위해 꾸준히 관련된 공부를 하며 노력중입니다!
+                    저는 코딩으로 웹을 표현하는 것에 매우 흥미를 느껴 웹퍼블리셔를 꿈꾸기 시작하였습니다.
+                    웹표준 및 웹접근성과 시멘틱한 마크업을 중시하고, 보다 견고하면서 사용자에게 편리한 UI/UX 를 추구하는 웹퍼블리셔 입니다. <br class="sm-only" /> 또한
+                    자바스크립트를 사용한 동적인 웹 구현에 관심이 많으며, 정체 되어 있지 않고 항상 끊임없는 발전을 위해 꾸준히 공부를 하며 노력중입니다!
                   </p>
                 </div>
               </div>
@@ -120,47 +124,91 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="content">
+            <div class="skill">
               <h1 class="title">
                 Skill
               </h1>
+              <div class="skill-wrap">
+                <ul class="skill-list">
+                  <li data-alt="tab1" class="skill-item is-active">
+                    <div class="image">
+                      <img src="./images/skill-item-active-01.png" alt="">
+                      <img src="./images/skill-item-01.png" alt="">
+                      <strong>HTML5</strong>
+                    </div>
+                  </li>
+                  <li data-alt="tab2" class="skill-item">
+                    <div class="image">
+                      <img src="./images/skill-item-active-02.png" alt="">
+                      <img src="./images/skill-item-02.png" alt="">
+                      <strong>CSS</strong>
+                    </div>
+                  </li>
+                  <li data-alt="tab3" class="skill-item">
+                    <div class="image">
+                      <img src="./images/skill-item-active-03.png" alt="">
+                      <img src="./images/skill-item-03.png" alt="">
+                      <strong>SCSS</strong>
+                    </div>
+                  </li>
+                  <li data-alt="tab4" class="skill-item">
+                    <div class="image">
+                      <img src="./images/skill-item-active-04.png" alt="">
+                      <img src="./images/skill-item-04.png" alt="">
+                      <strong>Javascript</strong>
+                    </div>
+                  </li>
+                  <li data-alt="tab5" class="skill-item">
+                    <div class="image">
+                      <img src="./images/skill-item-active-05.png" alt="">
+                      <img src="./images/skill-item-05.png" alt="">
+                      <strong>jQuery</strong>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="skill-desc-list tabs">
+                  <li id="tab1" class="skill-desc-item is-active">
+                    <p>
+                      시멘틱한 구조와 웹표준 및 웹 접근성에 준수하는 마크업을 합니다. HTML 은 물론 모바일 페이지를 하드코딩할 수 있습니다. 
+                    </p>
+                  </li>
+                  <li id="tab2" class="skill-desc-item">
+                    <p>
+                      주어진 디자인을 자유자재로 구현하며 CSS 속성에 대한 이해가 깊습니다. <br class="lg-only" /> 미디어 쿼리를 이용한 반응형 레이아웃을 구사할 수 있습니다.
+                    </p>
+                  </li>
+                  <li id="tab3" class="skill-desc-item">
+                    <p>
+                      SCSS 문법을 통해 기존의 CSS 보다 효율적으로 스타일링하며, 불필요한 부모 선택자의 남용을 줄일 수 있습니다.
+                    </p>
+                  </li>
+                  <li id="tab4" class="skill-desc-item">
+                    <p>
+                      자바스크립트에 대한 이해도가 있으며 간단한 기능들을 하드코딩할 수 있습니다. <br class="lg-only" /> 이를 통해 라이브러리나 플러그인을 보다 수월하게 사용할 수 있습니다.
+                    </p>
+                  </li>
+                  <li id="tab5" class="skill-desc-item">
+                    <p>
+                      이벤트 메서드를 사용해 기능을 구현하는 동시에 다양한 플러그인을 활용할 수 있습니다.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main-portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="portfolio">
+              <h1 class="title">
+                Portfolio
+              </h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada consectetur tortor vitae
-                tincidunt.
-                Sed luctus placerat lacinia. Vestibulum dignissim, nulla et semper dictum, diam nisl molestie lorem,
-                eget
-                feugiat ligula augue ut neque. Vestibulum quis dignissim risus, ut consectetur mi. Vivamus volutpat
-                eros odio,
-                eu aliquet nulla feugiat ut. Nulla in purus tristique, lobortis mi non, mattis ligula. Nunc turpis
-                neque,
-                tristique eu semper at, aliquet ac urna. Morbi varius quam efficitur, sollicitudin dui vitae,
-                dignissim nisl.
-                Curabitur fringilla aliquam felis vel vestibulum. Proin non rutrum turpis. Fusce turpis erat,
-                vestibulum vel
-                consectetur non, sodales et nibh. Praesent sit amet hendrerit eros. In a neque volutpat, iaculis ex
-                at,
-                convallis sem. Vestibulum dapibus nec nisi eget finibus. Donec vitae velit dignissim, semper arcu a,
-                placerat
-                sapien. Donec cursus purus enim, id euismod ipsum mattis eget.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto similique autem recusandae, eius
-                provident voluptas sint odit? Cum molestias, porro deserunt perferendis velit temporibus sequi optio
-                dignissimos consequuntur maxime maiores non cupiditate harum sunt consectetur explicabo. Iste
-                laudantium consequatur, fugiat ab odit necessitatibus veniam ratione temporibus rem provident minima
-                nam et non, sunt perferendis molestiae. Et dolore voluptate odio asperiores, placeat eveniet
-                voluptates nesciunt distinctio est itaque ducimus laborum porro quis sunt amet, debitis eius sed
-                voluptatum reiciendis culpa? Incidunt illum architecto in debitis accusamus sequi laboriosam nihil
-                harum, similique eius corrupti, adipisci aut alias velit doloribus vero. Consequatur exercitationem
-                dicta cupiditate amet explicabo maxime dignissimos reprehenderit molestiae quas alias dolor nobis
-                saepe odit laborum, aspernatur quidem magnam nam. Nam, voluptatum ducimus, eum numquam placeat sunt
-                tempora impedit ipsa sequi tenetur autem corporis aut! Vitae porro corporis rem autem. Sapiente modi
-                est, quasi impedit perferendis quae cum necessitatibus enim saepe sit expedita illum, quis sunt minima
-                in repellendus eaque repellat ducimus nesciunt, excepturi ex laborum! Voluptate atque quaerat ea rem
-                tempore veritatis reprehenderit omnis odio distinctio deleniti et suscipit harum, cumque numquam nulla
-                enim nostrum adipisci aliquam hic esse, natus itaque repellat at. Eum maiores ipsum reiciendis placeat
-                numquam a voluptas facilis assumenda repellendus, nesciunt optio provident explicabo temporibus
-                dolores at quo omnis consequatur sapiente, suscipit quod. Quibusdam, odio accusamus quia
-                exercitationem autem eligendi excepturi nesciunt! Consectetur unde, et, repellat ducimus ipsum
-                corporis repellendus laudantium modi iusto suscipit aperiam pariatur
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus blanditiis eum minus asperiores porro numquam enim repudiandae maiores, sunt facilis voluptatibus cum animi, perferendis quos recusandae aperiam velit, qui earum ab sapiente! Omnis reiciendis quod consequatur cupiditate obcaecati molestias amet repudiandae, eligendi in nesciunt consectetur corporis quasi labore ipsam voluptatibus eum culpa a hic dolores aperiam officiis deserunt doloremque quia. Labore veritatis at, similique illum quisquam quidem maxime eaque ut iure? Ab doloribus, nobis similique dolorem nulla eaque minima necessitatibus vero voluptates magni, doloremque vitae, culpa dignissimos corrupti modi. A reprehenderit dolorum sed voluptate itaque deleniti, totam, delectus mollitia aperiam modi illo tempora? Ab possimus consectetur enim adipisci nihil, velit ipsum saepe veniam! Perspiciatis quis optio eveniet, voluptate, voluptatem consequatur natus, incidunt sequi minima cumque vel doloribus deleniti sunt laborum at nisi consequuntur necessitatibus perferendis? Ea aperiam sint delectus voluptas quos tenetur error quasi veniam nobis, quisquam reprehenderit. Ratione culpa amet inventore iusto natus nemo deleniti nihil labore vitae nostrum sunt nobis eligendi magni reprehenderit eos accusantium repellendus temporibus deserunt consequuntur, perferendis porro possimus incidunt a quia? Eaque reprehenderit, suscipit voluptates eos praesentium incidunt cum iure officiis a tempora rem labore ipsam atque repudiandae quae consequuntur quibusdam, nesciunt illo totam ex aperiam. Similique alias suscipit expedita facere. Earum dolorem molestiae vel. In ut soluta doloremque dicta distinctio nobis. Eos animi odit provident, ratione deleniti, inventore quas maxime dolore iste cupiditate non eligendi rem excepturi repudiandae voluptatibus. Excepturi impedit accusantium vitae, incidunt facilis, ipsa ex velit et autem nisi maiores maxime quibusdam, quidem odio sint deleniti dolorum hic qui facere id minus. Illo autem eligendi perferendis beatae voluptate molestiae ducimus nihil. Quaerat est, labore natus voluptas repellat sint inventore, pariatur eos neque vitae unde. Repudiandae voluptas laborum sequi voluptatum fuga incidunt sapiente ipsa minima? Magnam impedit commodi qui. Consectetur vero expedita fuga assumenda quam odio, omnis possimus nulla! Quisquam, id? Molestiae, sint delectus quod, laudantium enim repudiandae laborum atque soluta, nobis repellendus obcaecati saepe assumenda magni reprehenderit dolorem ut deserunt maxime perspiciatis eos! Architecto veritatis, quasi facere reiciendis eos numquam, sapiente rem ea sit, ut debitis? Temporibus saepe placeat optio minima sed illum culpa assumenda dolorum, soluta natus ab eos labore ad libero nobis tempore, quibusdam nisi maxime odio, ex corrupti? Molestias, omnis. Voluptatibus blanditiis fugiat maxime natus voluptatum. Inventore alias officiis ut officia tempore eum vero nulla possimus aliquid saepe! Ea natus consequuntur rerum amet totam, velit molestias tempora quasi voluptate dolor excepturi eveniet quaerat ab, sint numquam qui id veniam unde nobis repudiandae iure? Optio, alias tenetur! Ipsum molestiae iste pariatur nisi commodi sunt aperiam quas, sequi obcaecati inventore quam, nihil numquam, nulla et. Facere, iure dolore illum aut accusamus ex, odit quae totam officiis cumque molestias, quidem error. Repudiandae tempora doloremque provident. Dicta accusamus vel in nobis perferendis ut, non necessitatibus illum aliquid atque impedit, odit laudantium consectetur ad. Reiciendis minus quam sequi dolorem quia sint cumque doloribus quaerat, vel impedit, blanditiis ducimus ipsam tempora harum. Odio dolore dolorum perferendis earum. Quis similique laborum quod officiis consequatur veniam?
               </p>
             </div>
           </div>

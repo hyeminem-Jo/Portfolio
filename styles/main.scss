@@ -15,6 +15,7 @@
 @import './components/visual';
 @import './components/visual-content';
 @import './components/main-about';
+@import './components/main-skill';
 
 @import './layouts/grid';
 @import './layouts/header';
@@ -27,11 +28,14 @@
   margin: 0;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 section {
   background-color: #fff;
   position: relative;
-  // border: 1px solid;
-  padding-bottom: 60px;
+  padding: 50px 0;
 
   &:first-of-type {
     margin-top: 0;

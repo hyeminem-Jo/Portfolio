@@ -3,23 +3,43 @@
   box-shadow: 0px -15px 15px rgba(0, 0, 0, 0.106);
 
   .profile {
+    @include column-flexbox;
     padding: 10px;
 
     &-image {
       position: relative;
-      cursor: pointer;
+      width: 90%;
       border-radius: 500px;
+      margin-bottom: 10px;
+      cursor: pointer;
 
-      // &::before {
-      //   content: '';
-      //   position: absolute;
-      //   width: 100%;
-      //   height: 100%;
-      //   border-radius: 50%;
-      //   top: 30px;
-      //   left: -30px;
-      //   background-color: #f9e400;
-      // }
+      .profile-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        span {
+          position: absolute;
+          width: 104%;
+          height: 104%;
+          border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+          top: 0;
+          left: 0;
+          background-color: #f9e400;
+
+          &:nth-child(1) {
+            animation: circle 6s linear infinite;
+            opacity: 0.5;
+          }
+
+          &:nth-child(2) {
+            animation: circle 3s linear infinite;
+          }
+        }
+
+      }
 
       .image {
         position: relative;
@@ -96,23 +116,12 @@
     padding-top: 65px;
 
     .profile {
-      @include flexbox;
+      flex-direction: row;
 
       &-image {
-        margin-left: 30px;
+        width: 100%;
         max-width: 330px;
-        margin-right: 40px;
-
-        &::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          top: 30px;
-          left: -30px;
-          background-color: #f9e400;
-        }
+        margin-right: 50px;
       }
 
       &-desc {
@@ -122,6 +131,10 @@
         h2 {
           font-size: 30px;
           text-align: left;
+        }
+
+        p {
+          font-size: 15.5px;
         }
       }
     }
@@ -134,13 +147,13 @@
 
       &-image {
         margin-left: 50px;
-        margin-right: 60px;
+        margin-right: 70px;
         max-width: 450px;
 
-        &::before {
-          top: 50px;
-          left: -50px;
-        }
+        // &::before {
+        //   top: 50px;
+        //   left: -50px;
+        // }
 
         .info {
           div {
@@ -178,5 +191,14 @@
       }
     }
   }
+}
 
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
 }
