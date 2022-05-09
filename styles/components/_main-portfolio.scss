@@ -1,0 +1,221 @@
+.main-portfolio {
+  .portfolio {
+    &-list:first-child {
+      padding-top: 30px;
+    }
+
+    &-item {
+      position: relative;
+      margin-bottom: 70px;
+
+      .item-number {
+        position: absolute;
+        top: -75px;
+        left: -40px;
+        font-size: 90px;
+        font-family: 'Playfair Display', serif;
+        color: #ddd;
+      }
+
+      h2 {
+        margin: 20px 0 10px;
+      }
+
+      .content {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.503);
+      }
+
+      .btns {
+        @include flexbox;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s;
+
+        a,
+        button {
+
+          &:active,
+          &:hover {
+            background-color: #fff;
+            color: #333;
+          }
+
+          height: 40px;
+          padding: 0 20px;
+          margin: 0 3px;
+          font-size: 17px;
+          font-weight: 600;
+          font-family: "Montserrat",
+          sans-serif;
+          line-height: 40px;
+          border-radius: 20px;
+          transition: .3s;
+          background-color: orange;
+          color: #fff;
+        }
+      }
+
+      .image {
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: transform .3s
+        }
+      }
+
+      &:hover {
+        .image {
+          img {
+            transition: .3s;
+            transform: scale(1.1);
+            // display: none;
+          }
+        }
+        .btns {
+          opacity: 1;
+          visibility: visible;
+          z-index: 1;
+        }
+      }
+    }
+
+    @include responsive(T) {
+      &-wrap {
+        @include flexbox(between, start);
+        position: relative;
+        padding-top: 30px;
+
+        .date, .misc {
+          position: absolute;
+          font-size: 19px;
+          font-weight: 500;
+          color: #aaa;
+        }
+
+        .date {
+          top: 30px;
+          left: calc(50% + 15px);
+        }
+
+        .misc {
+          bottom: 30px;
+          left: 0;
+        }
+      }
+
+      &-list {
+        @include column-flexbox;
+        width: calc(50% - 15px);
+
+        &:last-child {
+          margin-top: 100px;
+        }
+      }
+
+      &-item {
+        position: relative;
+        margin-bottom: 30px;
+
+        &:hover {
+          .text {
+            opacity: 1;
+            z-index: 1;
+          }
+        }
+
+        .image {
+          height: 230px;
+
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .btns {
+          padding-top: 80px;
+        }
+
+        .item-number {
+          display: none;
+          top: -55px;
+          left: -40px;
+          font-size: 70px;
+        }
+
+        .text {
+          @include pos-center-x;
+          // border: 1px solid red;
+          text-align: center;
+          top: 50px;
+          width: 100%;
+          color: #fff;
+          opacity: 0;
+          transition: .3s;
+        }
+      }
+    }
+
+    @include responsive(D) {
+      &-wrap {
+        .date {
+          font-size: 22px;
+          left: calc(50% + 20px);
+        }
+      }
+      &-list {
+        width: calc(50% - 20px);
+
+        &:last-child {
+          margin-top: 150px;
+        }
+      }
+
+      &-item {
+        width: 100%;
+        margin-bottom: 50px;
+
+        .image {
+          height: 320px;
+        }
+
+        .btns {
+          a, button {
+            height: 45px;
+            line-height: 45px;
+            padding: 0 30px;
+            border-radius: 25px;
+          }
+        }
+
+        .text {
+          top: 80px;
+
+          h2 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    background: url('/images/bgc-circle.png') no-repeat bottom -50px left -250px;
+    background-size: 120%;
+  }
+
+  @include responsive(D) {
+    background: url('/images/bgc-circle.png') no-repeat top 300px center;
+    background-size: 70%;
+  }
+}

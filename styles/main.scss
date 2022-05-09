@@ -16,7 +16,7 @@
 @import './components/visual-content';
 @import './components/main-about';
 @import './components/main-skill';
-@import './components/main-project';
+@import './components/main-portfolio';
 
 @import './layouts/grid';
 @import './layouts/header';
@@ -47,7 +47,7 @@ section {
   }
 
   @include responsive(T) {
-    padding-bottom: 80px;
+    padding: 80px 0;
   }
 
   @include responsive(D) {
