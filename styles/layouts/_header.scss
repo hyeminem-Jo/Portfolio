@@ -24,11 +24,11 @@
     text-align: right;
     padding-top: 100px;
     background-color: #fff;
-    box-shadow: -2px 0 7px rgba(0, 0, 0, 0.334);
     transform: translate3d(100%, 0, 0);
     transition: transform .3s;
-
+    
     &.is-open {
+      box-shadow: -2px 0 7px rgba(0, 0, 0, 0.334);
       transform: translate3d(0, 0, 0);
       transition: transform .3s;
     }
@@ -37,7 +37,6 @@
 
       &.is-active {
         a {
-          color: chocolate;
           color: rgb(251, 126, 36);
         }
       }
@@ -46,7 +45,7 @@
 
         &:hover,
         &:active {
-          color: red;
+          color: rgb(251, 126, 36);
         }
 
         display: block;
@@ -67,7 +66,6 @@
 
   .trigger {
     position: relative;
-    // display: none;
     width: 40px;
     height: 20px;
     font-size: 0;
@@ -123,7 +121,6 @@
       transform: translate3d(0, 0, 0);
       background-color: transparent;
       box-shadow: none;
-
 
       &-list {
         @include flexbox;
