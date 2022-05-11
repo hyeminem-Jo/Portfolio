@@ -51,3 +51,20 @@ $('.skill-item').click(function () {
   $('#' + tab).addClass('is-active')
   $('#' + tab).siblings().removeClass('is-active')
 })
+
+// portfolio popup 창
+$('.portfolio-item button').click(function () {
+  var $item = $('.portfolio-item')
+  var $selectedItem = $(this).closest('li')
+  var index = $item.index($selectedItem)
+  $('.popup-item').css('z-index', 0)
+  $('.popup-item').eq(index).css('z-index', 1)
+  
+  $('.popup').addClass('is-active');
+  $('.popup + .overlay').addClass('is-active')
+})
+
+$('.popup-item .btn-close, .popup + .overlay').click(function () {
+  $('.popup').removeClass('is-active');
+  $('.popup + .overlay').removeClass('is-active')
+})

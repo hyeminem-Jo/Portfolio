@@ -12,11 +12,14 @@
 @import './mixins/responsive';
 @import './mixins/position';
 
+@import './modules/button-group';
+
 @import './components/visual';
 @import './components/visual-content';
 @import './components/main-about';
 @import './components/main-skill';
 @import './components/main-portfolio';
+@import './components/popup';
 
 @import './layouts/grid';
 @import './layouts/header';
@@ -61,17 +64,6 @@ section {
   margin-bottom: 30px;
   text-align: center;
   color: rgb(251, 126, 36);
-
-  // &::before {
-  //   @include pos-center-x;
-  //   top: 0;
-  //   height: 100%;
-  //   width: 45%;
-  //   background-color: #f9e400;
-  //   transform: translateX(-60px) rotate(-9deg);
-  //   opacity: 0.3;
-  //   content: '';
-  // }
 
   @include responsive(T) {
     font-size: 55px;
