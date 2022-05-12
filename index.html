@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@900&display=swap" rel="stylesheet">
@@ -39,14 +40,14 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <div class="header-wrap">
+          <div class="header-inner">
             <nav class="gnb">
               <ul class="gnb-list">
-                <li class="gnb-item is-active"><a href="#none">HOME</a></li>
-                <li class="gnb-item"><a href="#none">ABOUT</a></li>
-                <li class="gnb-item"><a href="#none">SKILL</a></li>
-                <li class="gnb-item"><a href="#none">PROJECT</a></li>
-                <li class="gnb-item"><a href="#none">CONTACT</a></li>
+                <li class="gnb-item is-active" data-num="1"><a href="#none">HOME</a></li>
+                <li class="gnb-item" data-num="2"><a href="#none">ABOUT</a></li>
+                <li class="gnb-item" data-num="3"><a href="#none">SKILL</a></li>
+                <li class="gnb-item" data-num="4"><a href="#none">PROJECT</a></li>
+                <li class="gnb-item" data-num="5"><a href="#none">CONTACT</a></li>
               </ul>
             </nav>
             <div class="menu sm-only">
@@ -62,26 +63,29 @@
       </div>
     </div>
   </header>
-  <section class="visual parallax">
-    <div class="background" aria-hidden="true">
-      <div class="floating floating-01">
-        <img src="./images/object01.png" alt="">
-      </div>
-      <div class="floating floating-02 sm-hidden">
-        <img src="./images/object02.png" alt="">
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="visual">
+    <div class="parallax">
+      <div class="background" aria-hidden="true">
+        <div class="floating floating-01">
+          <img src="./images/object01.png" alt="">
+        </div>
+        <div class="floating floating-02 sm-hidden">
+          <img src="./images/object02.png" alt="">
+        </div>
       </div>
     </div>
-  </section>
-  <div class="visual-content">
-    <div class="heading">
-      <h1>hi, I'm Hyejin :)</h1>
-      <h2>: web publisher portfolio</h2>
+    <div class="visual-content">
+      <div class="heading">
+        <h1>hi, I'm Hyejin :)</h1>
+        <h2>: web publisher portfolio</h2>
+      </div>
+      <button class="page-down sm-hidden" type="button">
+        <p class="down">
+          <span>아래보기</span>
+        </p>
+      </button>
     </div>
-    <button class="page-down sm-hidden" type="button">
-      <p class="down">
-        <span>아래보기</span>
-      </p>
-    </button>
   </div>
   <main>
     <section class="main-about">
@@ -117,6 +121,12 @@
                     웹표준 및 웹접근성과 시멘틱한 마크업을 중시하고, 보다 견고하면서 사용자에게 편리한 UI/UX 를 추구하는 웹퍼블리셔 입니다. <br class="sm-only" /> 또한
                     자바스크립트를 사용한 동적인 웹 구현에 관심이 많으며, 정체 되어 있지 않고 항상 끊임없는 발전을 위해 꾸준히 공부를 하며 노력중입니다!
                   </p>
+                  <span>
+                    <b># 활발한</b>
+                    <b># 협동심강한</b>
+                    <b># 끈기있는</b>
+                    <b># 꾸준한</b>
+                  </span>
                 </div>
               </div>
             </div>
@@ -132,7 +142,7 @@
               <h1 class="title">
                 Skill
               </h1>
-              <div class="skill-wrap">
+              <div class="skill-inner">
                 <ul class="skill-list">
                   <li data-alt="tab1" class="skill-item is-active">
                     <div class="image">
@@ -188,7 +198,7 @@
                   </li>
                   <li id="tab4" class="skill-desc-item">
                     <p>
-                      자바스크립트에 대한 이해도가 있으며 간단한 기능들을 하드코딩할 수 있습니다. <br class="lg-only" /> 이를 통해 라이브러리나 플러그인을 보다 수월하게 사용할 수
+                      자바스크립트 ES6 문법을 이해하고 활용할 수 있으며 이를 통해 <br class="lg-only" /> 라이브러리나 플러그인을 보다 수월하게 사용할 수
                       있습니다.
                     </p>
                   </li>
@@ -198,6 +208,14 @@
                     </p>
                   </li>
                 </ul>
+                <!-- <div class="skill-etc sm-hidden">
+                  <p>
+                    짜증나
+                  </p>
+                  <p>
+                    짜증나
+                  </p>
+                </div> -->
               </div>
             </div>
           </div>
@@ -212,7 +230,7 @@
               <h1 class="title">
                 Portfolio
               </h1>
-              <div class="portfolio-wrap">
+              <div class="portfolio-inner">
                 <span class="date sm-hidden">2021.06 - 2022.05</span>
                 <span class="misc sm-hidden">WEBSITES & SCRIPTS</span>
                 <ul class="portfolio-list">
@@ -345,11 +363,85 @@
         </div>
       </div>
     </section>
+    <section class="main-contact">
+      <div class="parallax">
+        <div class="background" aria-hidden="true">
+          <div class="floating floating-01">
+            <img src="./images/object01.png" alt="">
+          </div>
+          <div class="floating floating-02 sm-hidden">
+            <img src="./images/object02.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="contact">
+                <h1 class="title">
+                  Contact
+                </h1>
+                <div class="contact-form">
+                  <div class="contact-form-info lg-only">
+                    <div class="info">
+                      <div class="p-number">
+                        <strong>Phone</strong> <br /> +82 10 - 9275 - 5637
+                      </div>
+                      <div class="email">
+                        <strong>Email</strong> <br />
+                        konnimey5@gmail.com
+                      </div>
+                      <div class="address">
+                        <strong>Address</strong> 
+                        <br /> 서울특별시 서대문구 독립문로 10
+                      </div>
+                    </div>
+                    <figure class="image">
+                      <img src="./images/kakaotalk-qr.jpeg" alt="">
+                      <!-- <button type="button">이력서 다운받기</button> -->
+                    </figure>
+                  </div>
+                  <form class="gform pure-form pure-form-stacked" method="POST" data-email="konnimey5@gmail.com"
+                    action="https://script.google.com/macros/s/AKfycbwtZiUY9l3hSTFR634YH4RTGV5hDpqN38n5Es3AbU2NAXXb5CyCPSGe-qXviC4i1cIyAw/exec">
+                    <div class="form-elements"><br>
+                      <div>
+                        <strong>Name</strong><br>
+                        <input type="text" name="name" required="" placeholder="Your Name" /><br><br>
+
+                        <strong>Email</strong><br>
+                        <input type="email" name="email" required="" placeholder="Your Email" /><br><br>
+
+                        <strong>Message</strong><br>
+                        <textarea name="message" rows="5" cols="22" required=""
+                          placeholder="다양한 의견을 남겨주세요 :)"></textarea><br><br>
+
+                        <button class="btn-send" type="submit">
+                          Send</button><br>
+                      </div>
+                    </div>
+
+                    <div class="thankyou-message" style="display: none">
+                      <h1>Thanks for <br class="sm-only" /> contacting me! <br /> 💛💛💛💛</h1>
+                    </div>
+                  </form>
+                </div>
+                <p class="copyright sm-only">
+                  JOHYEJIN © 2022PORTFOLIO
+                </p>
+                <p class="copyright sm-hidden">
+                  Copyright 2022. <br class="sm-only" /> Web publisher portfolio-- by Hye Jin
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
 
   </footer>
-  <div class="overlay" aria-hidden="true"></div>
 
   <div class="popup">
     <div class="container">
@@ -359,7 +451,7 @@
             <li class="popup-item">
               <button class="btn-close">
                 <span class="material-symbols-outlined">
-                close
+                  close
                 </span>
               </button>
               <figure class="image">
@@ -372,7 +464,8 @@
                 </h2>
                 <span>반응형 / html / scss / Javascript</span>
                 <div class="desc">
-                  이화여자대학교 홈페이지를 클론한 웹사이트입니다. 그리드 시스템에 기반한 반응형 사이트이며 순수 자바스크립트를 활용하여 사이트맵 탭 메뉴 클릭 이벤트, 스크롤 이벤트 등을 구현하였습니다. 또한 슬라이드는 tiny-slider 플러그인을 사용하였습니다.
+                  이화여자대학교 홈페이지를 클론한 웹사이트입니다. 그리드 시스템에 기반한 반응형 사이트이며 순수 자바스크립트를 활용하여 사이트맵 탭 메뉴 클릭 이벤트, 스크롤 이벤트 등을
+                  구현하였습니다. 또한 슬라이드는 tiny-slider 플러그인을 사용하였습니다.
                 </div>
                 <div class="btns">
                   <a href="#none">GitHub</a>
@@ -383,7 +476,7 @@
             <li class="popup-item">
               <button class="btn-close">
                 <span class="material-symbols-outlined">
-                close
+                  close
                 </span>
               </button>
               <figure class="image">
@@ -396,7 +489,8 @@
                 </h2>
                 <span>반응형 / html / scss / Javascript</span>
                 <div class="desc">
-                  기존의 쇼핑몰사이트를 강아지 쇼핑몰로 리뉴얼한 웹사이트입니다. 그리드 시스템에 기반한 반응형 사이트이며 순수 자바스크립트를 활용하여 탭 메뉴 클릭 이벤트, 스크롤 이벤트 등을 구현하였습니다. 또한 슬라이드는 tiny-slider 플러그인을 사용하였습니다.
+                  기존의 쇼핑몰사이트를 강아지 쇼핑몰로 리뉴얼한 웹사이트입니다. 그리드 시스템에 기반한 반응형 사이트이며 순수 자바스크립트를 활용하여 탭 메뉴 클릭 이벤트, 스크롤 이벤트 등을
+                  구현하였습니다. 또한 슬라이드는 tiny-slider 플러그인을 사용하였습니다.
                 </div>
                 <div class="btns">
                   <a href="#none">GitHub</a>
@@ -407,7 +501,7 @@
             <li class="popup-item">
               <button class="btn-close">
                 <span class="material-symbols-outlined">
-                close
+                  close
                 </span>
               </button>
               <figure class="image">
@@ -420,7 +514,8 @@
                 </h2>
                 <span>반응형 / html / css / jQuery</span>
                 <div class="desc">
-                  보그 코리아 패션 사이트를 리뉴얼한 웹사이트입니다. 미디어쿼리를 사용한 반응형 사이트이며 제이쿼리를 활용하여 팝업 이벤트, 스크롤 이벤트, 기타 클릭이벤트 등을 구현하였습니다. 또한 슬라이드는 swiper 플러그인을 사용하였습니다.
+                  보그 코리아 패션 사이트를 리뉴얼한 웹사이트입니다. 미디어쿼리를 사용한 반응형 사이트이며 제이쿼리를 활용하여 팝업 이벤트, 스크롤 이벤트, 기타 클릭이벤트 등을 구현하였습니다. 또한
+                  슬라이드는 swiper 플러그인을 사용하였습니다.
                 </div>
                 <div class="btns">
                   <a href="#none">GitHub</a>
@@ -431,7 +526,7 @@
             <li class="popup-item">
               <button class="btn-close">
                 <span class="material-symbols-outlined">
-                close
+                  close
                 </span>
               </button>
               <figure class="image">
@@ -444,7 +539,9 @@
                 </h2>
                 <span>PC / html / css / jQuery</span>
                 <div class="desc">
-                  퍼시스 가구 사이트를 리뉴얼한 웹사이트입니다. 제이쿼리를 사용하였으며 하드코딩으로 슬라이드 및, 스크롤 이벤트, 기타 클릭이벤트 등을 구현하였습니다. 서브페이지로 회사소개, 고객서비스 페이지를 제작했으며 table, form, input 등 태그의 활용으로 신청란을 작업하였습니다. 또한 header 와 footer 를 분리시켜 서브페이지에서도 연동될 수 있게끔 구현하였습니다.
+                  퍼시스 가구 사이트를 리뉴얼한 웹사이트입니다. 제이쿼리를 사용하였으며 하드코딩으로 슬라이드 및, 스크롤 이벤트, 기타 클릭이벤트 등을 구현하였습니다. 서브페이지로 회사소개, 고객서비스
+                  페이지를 제작했으며 table, form, input 등 태그의 활용으로 신청란을 작업하였습니다. 또한 header 와 footer 를 분리시켜 서브페이지에서도 연동될 수 있게끔
+                  구현하였습니다.
                 </div>
                 <div class="btns">
                   <a href="#none">GitHub</a>
@@ -455,7 +552,7 @@
             <li class="popup-item">
               <button class="btn-close">
                 <span class="material-symbols-outlined">
-                close
+                  close
                 </span>
               </button>
               <figure class="image">
@@ -468,7 +565,8 @@
                 </h2>
                 <span>PC / html / scss / Javascript</span>
                 <div class="desc">
-                  Daily-D 는 일상관리용 앱으로, 크게 메모장, 그림일기, 계산기 기능이 있습니다. 이외에 외부 API 를 받아 날씨와 위치를 알려주는 기능과 로컬스토리지를 활용한 로그인 기능, 명언을 랜덤으로 표시해주는기능, 시계 기능 등이 있습니다. 모든 기능은 순수 자바스크립트로 구현되었습니다.
+                  Daily-D 는 일상관리용 앱으로, 크게 메모장, 그림일기, 계산기 기능이 있습니다. 이외에 외부 API 를 받아 날씨와 위치를 알려주는 기능과 로컬스토리지를 활용한 로그인 기능,
+                  명언을 랜덤으로 표시해주는기능, 시계 기능 등이 있습니다. 모든 기능은 순수 자바스크립트로 구현되었습니다.
                 </div>
                 <div class="btns">
                   <a href="#none">GitHub</a>
@@ -479,7 +577,7 @@
             <li class="popup-item">
               <button class="btn-close">
                 <span class="material-symbols-outlined">
-                close
+                  close
                 </span>
               </button>
               <figure class="image">
@@ -492,7 +590,8 @@
                 </h2>
                 <span>PC / html / scss / Javascript</span>
                 <div class="desc">
-                  Jinny-Game 은 여러 미니게임으로 이루어져 있는 사이트입니다. 모든 게임은 자바스크립트로 구현되었으며, 강의수업 내용으로 들었던 부분을 scss 작업을 통해 전부 디자인하였고 나만의 게임사이트로 개발하였습니다. 다양한 메서드와 로직으로 다뤄졌으며, 버그를 고치거나 새로운 기능을 추가 적용하는 등 게임들을 한 번씩 재구성하여 제작했습니다.
+                  Jinny-Game 은 여러 미니게임으로 이루어져 있는 사이트입니다. 모든 게임은 자바스크립트로 구현되었으며, 강의수업 내용으로 들었던 부분을 scss 작업을 통해 전부 디자인하였고
+                  나만의 게임사이트로 개발하였습니다. 다양한 메서드와 로직으로 다뤄졌으며, 버그를 고치거나 새로운 기능을 추가 적용하는 등 게임들을 한 번씩 재구성하여 제작했습니다.
                 </div>
                 <div class="btns">
                   <a href="#none">GitHub</a>
@@ -510,6 +609,7 @@
   <!-- jQuery CDN -->
   <script src="./js/jquery-3.6.0.js"></script>
   <script src="./js/main.js"></script>
+  <script src="js/form.js" data-cfasync="false" type="text/javascript"></script>
 </body>
 
 </html>
