@@ -91,7 +91,6 @@
 
   @include responsive(D) {
     width: 70%;
-    height: 600px;
 
     &-item {
       @include flexbox;

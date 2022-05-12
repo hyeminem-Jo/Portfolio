@@ -14,12 +14,13 @@
 
 @import './modules/button-group';
 
-@import './components/visual';
+@import './components/parallax';
 @import './components/visual-content';
 @import './components/main-about';
 @import './components/main-skill';
 @import './components/main-portfolio';
 @import './components/popup';
+@import './components/main-contact';
 
 @import './layouts/grid';
 @import './layouts/header';
@@ -37,8 +38,6 @@ body, html {
 }
 
 section {
-  background-color: #fff;
-  position: relative;
   padding: 50px 0;
 
   &:first-of-type {
@@ -54,6 +53,7 @@ section {
   }
 
   @include responsive(D) {
+    padding: 120px 0;
     padding-bottom: 150px;
   }
 }

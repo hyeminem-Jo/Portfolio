@@ -10,7 +10,7 @@
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.087);
   transition: .2s;
 
-  .header-wrap {
+  .header-inner {
     @include flexbox(end, center);
     width: 100%;
   }
@@ -37,7 +37,7 @@
 
       &.is-active {
         a {
-          color: rgb(251, 126, 36);
+          color: orangered;
         }
       }
 
@@ -45,7 +45,7 @@
 
         &:hover,
         &:active {
-          color: rgb(251, 126, 36);
+          color: orangered;
         }
 
         display: block;
