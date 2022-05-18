@@ -33,20 +33,21 @@
   margin: 0;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
+}
+
+main {
+  margin-top: 100vh;
+
+  @include responsive(D) {
+    margin-top: 0;
+  }
 }
 
 section {
   padding: 50px 0;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 
   @include responsive(T) {
     padding: 80px 0;
@@ -55,6 +56,14 @@ section {
   @include responsive(D) {
     padding: 120px 0;
     padding-bottom: 150px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 

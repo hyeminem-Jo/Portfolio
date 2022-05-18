@@ -1,18 +1,15 @@
 .main-contact {
+  background: url('/images/bg-mobile.png') no-repeat center;
+  background-size: cover;
   position: relative;
   padding: 0;
+  height: 100vh;
 
   .contact-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     padding: 80px 0;
   }
 
   .contact {
-
     h1 {
       color: #fff;
     }
@@ -41,7 +38,7 @@
 
           &:focus {
             border: 1px solid orange;
-            box-shadow: 0 0 10px orangered;
+            box-shadow: 0 0 5px orange;
 
             &::placeholder {
               opacity: 0;
@@ -124,8 +121,10 @@
         form {
           flex: 2;
 
-          input, textarea {
+          input,
+          textarea {
             padding-left: 20px;
+
             &::placeholder {
               // transition: .2s;
               font-size: 16px;
@@ -182,7 +181,7 @@
         }
       }
 
-      
+
     }
   }
 
@@ -193,4 +192,17 @@
       padding-bottom: 150px;
     }
   }
+
+  @include responsive(D) {
+    background: none;
+
+    .contact-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
 }
