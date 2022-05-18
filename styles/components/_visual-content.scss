@@ -1,3 +1,17 @@
+.visual {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  @include responsive(D) {
+    position: static;
+    z-index: 0;
+  }
+}
+
 .visual-content {
   @include flexbox;
   height: 100vh;

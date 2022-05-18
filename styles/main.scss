@@ -39,7 +39,7 @@ html {
 }
 
 main {
-  // margin-top: 100vh;
+  margin-top: 100vh;
 
   @include responsive(D) {
     margin-top: 0;

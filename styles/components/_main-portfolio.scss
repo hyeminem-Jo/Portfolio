@@ -188,8 +188,8 @@
   }
 
   @include responsive(T) {
-    background-color: #fff;
     background: url('/images/bgc-circle.png') no-repeat bottom -50px left -250px;
+    background-color: #fff;
     background-size: 120%;
   }
 
