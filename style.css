@@ -1044,6 +1044,11 @@ address {
   background-color: #fff;
   border-radius: 20px;
 }
+.main-contact .contact-form form .thankyou-message span {
+  display: block;
+  margin-top: 15px;
+  letter-spacing: 0.05em;
+}
 .main-contact .contact .copyright {
   position: absolute;
   left: 50%;
