@@ -1,5 +1,7 @@
 // 첫 페이지 스크롤 시 100vh 내려감
 
+var disableUpdating = false;
+
 // gnb 메뉴 버튼 클릭 시 해당 페이지로 스크롤 이동
 var pos1 = 0;
 var pos2 = Math.floor($('.main-about').offset().top)
@@ -20,27 +22,33 @@ $(window).resize(function () {
 })
 
 $('.gnb-item').click(function () {
+  disableUpdating = true;
   var num = $(this).attr('data-num');
   num -= 1;
   $("html, body").stop().animate({
     scrollTop: pos[num]
   }, 1000);
+  setTimeout(() => {
+    disableUpdating = false;
+  }, 1000)
 })
 
 // 스크롤 시 header gnb 메뉴 버튼 활성화
 function isActive(num) {
-  $(`.gnb-item:nth-child(${num})`).addClass('is-active')
-  $('.gnb-item').not(`.gnb-item:nth-child(${num})`).removeClass('is-active')
+  if (!disableUpdating) {
+    $(`.gnb-item:nth-child(${num})`).addClass('is-active')
+    $('.gnb-item').not(`.gnb-item:nth-child(${num})`).removeClass('is-active')
+  }
 }
 
 $(window).scroll(function () {
   var st = $(this).scrollTop();
   if (st >= pos1) {
     isActive(1)
-  } 
+  }
   if (st >= pos2 - 100) {
     isActive(2)
-  } 
+  }
   if (st >= pos3) {
     isActive(3)
   }
@@ -105,6 +113,11 @@ gsap.utils.toArray('.background').forEach((background, i) => {
 $('.menu').click(function () {
   $('.trigger, .gnb').toggleClass('is-open')
   $('.global-header + .overlay').toggleClass('is-active')
+})
+
+$('.global-header + .overlay').click(function () {
+  $('.trigger, .gnb').removeClass('is-open')
+  $(this).removeClass('is-active')
 })
 
 // page-down 버튼 클릭 시 아래로 스크롤
