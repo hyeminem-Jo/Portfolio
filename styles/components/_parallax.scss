@@ -12,7 +12,7 @@
     height: 100%;
     z-index: -1;
     pointer-events: none;
-    background: url('/images/bg13.jpg') no-repeat center;
+    background: url('/images/bg-mobile.png') no-repeat center;
     background-attachment: fixed;
     background-size: cover;
     filter: contrast(1.2);
@@ -43,24 +43,40 @@
     }
   }
 
-
-  @media all and (min-width: 768px) and (max-width: 1199px) {
-
+  @include responsive(T) {
     .background {
-      .floating {
-        &-01 {
-          top: -15%;
-          left: -40%;
-        }
-        &-02 {
-          top: -2%;
-          right: -75%;
-        }
-      }
+      background: url('/images/bg-tablet.png') no-repeat center;
+      background-attachment: fixed;
+      background-size: cover;
     }
   }
 
-  @include responsive(T) {
-    @include flexbox(start);
+  @include responsive(D) {
+    .background {
+      background: url('/images/bg13.jpg') no-repeat center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
   }
+
+
+  // @media all and (min-width: 768px) and (max-width: 1199px) {
+
+  //   .background {
+  //     .floating {
+  //       &-01 {
+  //         top: -15%;
+  //         left: -40%;
+  //       }
+  //       &-02 {
+  //         top: -2%;
+  //         right: -75%;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // @include responsive(T) {
+  //   @include flexbox(start);
+  // }
 }

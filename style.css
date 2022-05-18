@@ -189,7 +189,7 @@ address {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  background: url("/images/bg13.jpg") no-repeat center;
+  background: url("/images/bg-mobile.png") no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   filter: contrast(1.2);
@@ -215,21 +215,18 @@ address {
   width: 100%;
   height: auto;
 }
-@media all and (min-width: 768px) and (max-width: 1199px) {
-  .parallax .background .floating-01 {
-    top: -15%;
-    left: -40%;
-  }
-  .parallax .background .floating-02 {
-    top: -2%;
-    right: -75%;
+@media screen and (min-width: 768px) {
+  .parallax .background {
+    background: url("/images/bg-tablet.png") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
-@media screen and (min-width: 768px) {
-  .parallax {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+@media screen and (min-width: 1200px) {
+  .parallax .background {
+    background: url("/images/bg13.jpg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
 
@@ -996,7 +993,7 @@ address {
 .main-contact .contact-form form input:focus,
 .main-contact .contact-form form textarea:focus {
   border: 1px solid orange;
-  box-shadow: 0 0 5px orange;
+  box-shadow: 0 0 10px orangered;
 }
 .main-contact .contact-form form input:focus::placeholder,
 .main-contact .contact-form form textarea:focus::placeholder {
