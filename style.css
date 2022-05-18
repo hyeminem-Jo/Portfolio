@@ -189,9 +189,12 @@ address {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  background: url("/images/bg-mobile.png") no-repeat center;
+  background: url("/images/bg13.jpg") no-repeat center;
   background-attachment: fixed;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   filter: contrast(1.2);
   box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7);
   overflow: hidden;
@@ -215,18 +218,21 @@ address {
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 768px) {
-  .parallax .background {
-    background: url("/images/bg-tablet.png") no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  .parallax .background .floating-01 {
+    top: -15%;
+    left: -40%;
+  }
+  .parallax .background .floating-02 {
+    top: -2%;
+    right: -75%;
   }
 }
-@media screen and (min-width: 1200px) {
-  .parallax .background {
-    background: url("/images/bg13.jpg") no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
+@media screen and (min-width: 768px) {
+  .parallax {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -239,6 +245,8 @@ address {
   left: 0;
   width: 100%;
   height: 100%;
+  background: url("/images/bg-mobile.png") no-repeat center;
+  background-size: cover;
 }
 .visual-content .heading {
   margin-top: 50px;
@@ -318,6 +326,14 @@ address {
   }
 }
 @media screen and (min-width: 1200px) {
+  .visual-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
   .visual-content .heading {
     margin-left: -200px;
     margin-top: 0;
@@ -956,15 +972,13 @@ address {
 }
 
 .main-contact {
+  background: url("/images/bg-mobile.png") no-repeat center;
+  background-size: cover;
   position: relative;
   padding: 0;
+  height: 100vh;
 }
 .main-contact .contact-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   padding: 80px 0;
 }
 .main-contact .contact h1 {
@@ -993,7 +1007,7 @@ address {
 .main-contact .contact-form form input:focus,
 .main-contact .contact-form form textarea:focus {
   border: 1px solid orange;
-  box-shadow: 0 0 10px orangered;
+  box-shadow: 0 0 5px orange;
 }
 .main-contact .contact-form form input:focus::placeholder,
 .main-contact .contact-form form textarea:focus::placeholder {
@@ -1065,10 +1079,12 @@ address {
   .main-contact .contact-form form {
     flex: 2;
   }
-  .main-contact .contact-form form input, .main-contact .contact-form form textarea {
+  .main-contact .contact-form form input,
+.main-contact .contact-form form textarea {
     padding-left: 20px;
   }
-  .main-contact .contact-form form input::placeholder, .main-contact .contact-form form textarea::placeholder {
+  .main-contact .contact-form form input::placeholder,
+.main-contact .contact-form form textarea::placeholder {
     font-size: 16px;
   }
   .main-contact .contact-form form strong {
@@ -1119,6 +1135,18 @@ address {
   .main-contact .contact-wrapper {
     padding: 100px 0;
     padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-contact {
+    background: none;
+  }
+  .main-contact .contact-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1379,18 +1407,22 @@ address {
   margin: 0;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
+}
+
+main {
+  margin-top: 100vh;
+}
+@media screen and (min-width: 1200px) {
+  main {
+    margin-top: 0;
+  }
 }
 
 section {
   padding: 50px 0;
-}
-section:first-of-type {
-  margin-top: 0;
-}
-section:last-of-type {
-  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   section {
@@ -1401,6 +1433,12 @@ section:last-of-type {
   section {
     padding: 120px 0;
     padding-bottom: 150px;
+  }
+  section:first-of-type {
+    margin-top: 0;
+  }
+  section:last-of-type {
+    margin-bottom: 0;
   }
 }
 
