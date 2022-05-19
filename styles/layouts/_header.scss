@@ -11,8 +11,23 @@
   transition: .2s;
 
   .header-inner {
-    @include flexbox(end, center);
+    @include flexbox(end);
     width: 100%;
+    // border: 10px solid red;
+  }
+
+  .logo {
+    @include flexbox;
+    // width: 42px;
+    // height: 42px;
+    // border-radius: 50%;
+    // background-color: orange;
+    a {
+      font-size: 1.2em;
+      font-family: 'Lemon', cursive;
+      font-family: "Playfair Display", serif;
+      color: orange;
+    }
   }
 
   .gnb {

@@ -17,7 +17,7 @@
         left: -40px;
         font-size: 90px;
         font-family: 'Playfair Display', serif;
-        color: #ddd;
+        color: #eee;
       }
 
       h2 {
@@ -188,7 +188,7 @@
   }
 
   @include responsive(T) {
-    background: url('/images/bgc-circle.png') no-repeat bottom -50px left -250px;
+    // background: url('/images/bgc-circle.png') no-repeat bottom -50px left -250px;
     background-color: #fff;
     background-size: 120%;
   }

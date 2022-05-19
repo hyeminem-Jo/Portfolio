@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="./style.css" />
   <!-- Lodash -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
@@ -32,6 +34,11 @@
   <!-- Swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+
   <title>조혜진의 포트폴리오</title>
 </head>
 
@@ -80,11 +87,11 @@
         <h1>hi, I'm Hyejin :)</h1>
         <h2>: web publisher portfolio</h2>
       </div>
-      <button class="page-down sm-hidden" type="button">
+      <div class="page-down sm-hidden">
         <p class="down">
           <span>아래보기</span>
         </p>
-      </button>
+      </div>
     </div>
   </div>
   <main>
@@ -93,9 +100,9 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="about">
-              <h1 class="title">
+              <h2 class="title">
                 About Me
-              </h1>
+              </h2>
               <div class="profile">
                 <div class="profile-image">
                   <div class="profile-animation" aria-hidden="true">
@@ -139,9 +146,9 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="skill">
-              <h1 class="title">
+              <h2 class="title">
                 Skill
-              </h1>
+              </h2>
               <div class="skill-inner">
                 <ul class="skill-list">
                   <li data-alt="tab1" class="skill-item is-active">
@@ -219,9 +226,9 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="portfolio">
-              <h1 class="title">
+              <h2 class="title">
                 Portfolio
-              </h1>
+              </h2>
               <div class="portfolio-inner">
                 <span class="date sm-hidden">2021.06 - 2022.05</span>
                 <span class="misc sm-hidden">WEBSITES & SCRIPTS</span>
@@ -371,9 +378,9 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="contact">
-                <h1 class="title">
+                <h2 class="title">
                   Contact
-                </h1>
+                </h2>
                 <div class="contact-form">
                   <div class="contact-form-info lg-only">
                     <div class="info">
@@ -409,10 +416,10 @@
                       </div>
                     </div>
                     <div class="thankyou-message" style="display: none;">
-                      <h1>
+                      <h2>
                         Thanks for <br class="sm-only" /> contacting me!
                         <span>💛💛💛💛</span>
-                      </h1>
+                      </h2>
                     </div>
                   </form>
                 </div>
@@ -599,7 +606,8 @@
   <!-- jQuery CDN -->
   <script src="./js/jquery-3.6.0.js"></script>
   <script src="./js/main.js"></script>
-  <script src="js/form.js" data-cfasync="false" type="text/javascript"></script>
+  <script src="js/form.js" data-cfasync="false"></script>
+  <!-- <script src="js/form.js" data-cfasync="false" type="text/javascript"></script> -->
 </body>
 
 </html>

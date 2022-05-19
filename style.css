@@ -284,6 +284,7 @@ address {
   height: 80px;
   bottom: 30px;
   z-index: 40;
+  cursor: pointer;
 }
 .visual-content .page-down span {
   display: block;
@@ -728,7 +729,7 @@ address {
   left: -40px;
   font-size: 90px;
   font-family: "Playfair Display", serif;
-  color: #ddd;
+  color: #eee;
 }
 .main-portfolio .portfolio-item h2 {
   margin: 20px 0 10px;
@@ -869,7 +870,6 @@ address {
 }
 @media screen and (min-width: 768px) {
   .main-portfolio {
-    background: url("/images/bgc-circle.png") no-repeat bottom -50px left -250px;
     background-color: #fff;
     background-size: 120%;
   }
@@ -990,8 +990,8 @@ address {
   padding: 0;
   height: 100vh;
 }
-.main-contact .contact h1 {
-  padding-top: 80px;
+.main-contact .contact h2 {
+  padding-top: 50px;
   color: #fff;
 }
 .main-contact .contact-form {
@@ -1050,7 +1050,7 @@ address {
   transform: translateY(-2px);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
-.main-contact .contact-form form .thankyou-message h1 {
+.main-contact .contact-form form .thankyou-message h2 {
   height: 380px;
   padding-top: 100px;
   line-height: 1.2em;
@@ -1105,7 +1105,7 @@ address {
   .main-contact .contact-form form strong {
     font-size: 20px;
   }
-  .main-contact .contact-form form .thankyou-message h1 {
+  .main-contact .contact-form form .thankyou-message h2 {
     height: 500px;
     padding-top: 170px;
     line-height: 2em;
@@ -1294,6 +1294,17 @@ address {
   align-items: center;
   width: 100%;
 }
+.global-header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.global-header .logo a {
+  font-size: 1.2em;
+  font-family: "Lemon", cursive;
+  font-family: "Playfair Display", serif;
+  color: orange;
+}
 .global-header .gnb {
   position: fixed;
   top: 0;
@@ -1459,10 +1470,12 @@ section {
 
 .title {
   position: relative;
-  font-size: 40px;
   margin-bottom: 30px;
   text-align: center;
   color: rgb(251, 126, 36);
+  font-size: 40px;
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
 }
 @media screen and (min-width: 768px) {
   .title {
