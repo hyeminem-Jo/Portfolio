@@ -20,6 +20,9 @@
 
         input,
         textarea {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           width: 100%;
           padding: 10px;
           border-radius: 15px;
@@ -27,6 +30,7 @@
           background-color: #fff;
           border: 1px solid #ccc;
           transition: .2s;
+          outline: none;
 
           &::placeholder {
             transition: .2s;
@@ -35,7 +39,7 @@
 
           &:focus {
             border: 1px solid orange;
-            box-shadow: 0 0 5px orange;
+            box-shadow: 0 0 7px orange;
 
             &::placeholder {
               opacity: 0;
