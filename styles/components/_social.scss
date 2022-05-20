@@ -1,0 +1,19 @@
+.social {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+
+  &-item {
+    a {
+      @include flexbox;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+    }
+  }
+
+  @include responsive(D) {
+    left: 5%;
+  }
+}
