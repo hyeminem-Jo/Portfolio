@@ -46,17 +46,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"
     integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Gsap & ScrollTopPlugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollToPlugin.min.js"
-    integrity="sha512-pejU3r+QqP9FinPBc7gRHMjcI5MUoiGSyiJNHuFKJOAls/cucff3Z931FwmB6pMRkFxBnq8DGEpmn4xjBqpPpA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Gsap & ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
     integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,16 +115,16 @@
     </div>
   </div>
   <main>
-    <section class="main-about">
+    <section class="main-about scroll-spy">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
             <div class="about">
-              <h2 class="title">
+              <h2 class="title back-to-position to-top delay-0">
                 About Me
               </h2>
               <div class="profile">
-                <div class="profile-image">
+                <div class="profile-image back-to-position to-top delay-1">
                   <div class="profile-animation" aria-hidden="true">
                     <span class="object"></span>
                     <span class="object"></span>
@@ -142,7 +139,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="profile-desc">
+                <div class="profile-desc back-to-position to-top delay-2">
                   <h2>
                     코딩이 즐거운 <br class="md-only" /> 신입 웹퍼블리셔, <br /> 조혜진 입니다 👋
                   </h2>
@@ -164,46 +161,46 @@
         </div>
       </div>
     </section>
-    <section class="main-skill">
+    <section class="main-skill scroll-spy">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
             <div class="skill">
-              <h2 class="title">
+              <h2 class="title back-to-position to-top delay-0">
                 Skill
               </h2>
               <div class="skill-inner">
                 <ul class="skill-list">
                   <li data-alt="tab1" class="skill-item is-active">
-                    <div class="image">
+                    <div class="image back-to-position to-top delay-1">
                       <img src="./images/skill-item-active-01.png" alt="스킬 이미지">
                       <img src="./images/skill-item-01.png" alt="스킬 이미지">
                       <strong>HTML5</strong>
                     </div>
                   </li>
                   <li data-alt="tab2" class="skill-item">
-                    <div class="image">
+                    <div class="image back-to-position to-top delay-2">
                       <img src="./images/skill-item-active-02.png" alt="스킬 이미지">
                       <img src="./images/skill-item-02.png" alt="스킬 이미지">
                       <strong>CSS</strong>
                     </div>
                   </li>
                   <li data-alt="tab3" class="skill-item">
-                    <div class="image">
+                    <div class="image back-to-position to-top delay-3">
                       <img src="./images/skill-item-active-03.png" alt="스킬 이미지">
                       <img src="./images/skill-item-03.png" alt="스킬 이미지">
                       <strong>SCSS</strong>
                     </div>
                   </li>
                   <li data-alt="tab4" class="skill-item">
-                    <div class="image">
+                    <div class="image back-to-position to-top delay-4">
                       <img src="./images/skill-item-active-04.png" alt="스킬 이미지">
                       <img src="./images/skill-item-04.png" alt="스킬 이미지">
                       <strong>Javascript</strong>
                     </div>
                   </li>
                   <li data-alt="tab5" class="skill-item">
-                    <div class="image">
+                    <div class="image back-to-position to-top delay-5">
                       <img src="./images/skill-item-active-05.png" alt="스킬 이미지">
                       <img src="./images/skill-item-05.png" alt="스킬 이미지">
                       <strong>jQuery</strong>
@@ -211,28 +208,28 @@
                   </li>
                 </ul>
                 <ul class="skill-desc-list tabs">
-                  <li id="tab1" class="skill-desc-item is-active">
+                  <li id="tab1" class="skill-desc-item is-active back-to-position to-top delay-1">
                     <p>
                       시멘틱한 구조와 웹표준 및 웹 접근성에 준수하는 마크업을 합니다. HTML 은 물론 모바일 페이지를 하드코딩할 수 있습니다.
                     </p>
                   </li>
-                  <li id="tab2" class="skill-desc-item">
+                  <li id="tab2" class="skill-desc-item back-to-position to-top delay-2">
                     <p>
                       주어진 디자인을 자유자재로 구현하며 CSS 속성에 대한 이해가 깊습니다. <br class="lg-only" /> 미디어 쿼리를 이용한 반응형 레이아웃을 구사할 수 있습니다.
                     </p>
                   </li>
-                  <li id="tab3" class="skill-desc-item">
+                  <li id="tab3" class="skill-desc-item back-to-position to-top delay-3">
                     <p>
                       SCSS 문법을 통해 기존의 CSS 보다 효율적으로 스타일링하며, 불필요한 부모 선택자의 남용을 줄일 수 있습니다.
                     </p>
                   </li>
-                  <li id="tab4" class="skill-desc-item">
+                  <li id="tab4" class="skill-desc-item back-to-position to-top delay-4">
                     <p>
                       자바스크립트 ES6 문법을 이해하고 활용할 수 있으며 이를 통해 <br class="lg-only" /> 라이브러리나 플러그인을 보다 수월하게 사용할 수
                       있습니다.
                     </p>
                   </li>
-                  <li id="tab5" class="skill-desc-item">
+                  <li id="tab5" class="skill-desc-item back-to-position to-top delay-5">
                     <p>
                       이벤트 메서드를 사용해 기능을 구현하는 동시에 다양한 플러그인을 활용할 수 있습니다.
                     </p>
@@ -244,19 +241,19 @@
         </div>
       </div>
     </section>
-    <section class="main-portfolio">
+    <section class="main-portfolio scroll-spy">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
             <div class="portfolio">
-              <h2 class="title">
+              <h2 class="title back-to-position to-top delay-0">
                 Portfolio
               </h2>
               <div class="portfolio-inner">
                 <span class="date sm-hidden">2021.06 - 2022.05</span>
                 <span class="misc sm-hidden">WEBSITES & SCRIPTS</span>
                 <ul class="portfolio-list">
-                  <li class="portfolio-item">
+                  <li class="portfolio-item back-to-position to-top delay-1">
                     <div class="item-number">01</div>
                     <div class="content">
                       <div class="btns">
@@ -276,7 +273,7 @@
                       <span>반응형 / html / scss / Javascript</span>
                     </div>
                   </li>
-                  <li class="portfolio-item">
+                  <li class="portfolio-item back-to-position to-top delay-3">
                     <div class="item-number">02</div>
                     <div class="content">
                       <div class="btns">
@@ -296,7 +293,7 @@
                       <span>반응형 / html / scss / Javascript</span>
                     </div>
                   </li>
-                  <li class="portfolio-item">
+                  <li class="portfolio-item back-to-position to-top delay-5">
                     <div class="item-number">03</div>
                     <div class="content">
                       <div class="btns">
@@ -318,7 +315,7 @@
                   </li>
                 </ul>
                 <ul class="portfolio-list">
-                  <li class="portfolio-item">
+                  <li class="portfolio-item back-to-position to-top delay-2">
                     <div class="item-number">04</div>
                     <div class="content">
                       <div class="btns">
@@ -338,7 +335,7 @@
                       <span>PC / html / css / jQuery</span>
                     </div>
                   </li>
-                  <li class="portfolio-item">
+                  <li class="portfolio-item back-to-position to-top delay-4">
                     <div class="item-number">05</div>
                     <div class="content">
                       <div class="btns">
@@ -358,7 +355,7 @@
                       <span>PC / html / scss / Javascript</span>
                     </div>
                   </li>
-                  <li class="portfolio-item">
+                  <li class="portfolio-item back-to-position to-top delay-6">
                     <div class="item-number">06</div>
                     <div class="content">
                       <div class="btns">
@@ -385,7 +382,7 @@
         </div>
       </div>
     </section>
-    <section class="main-contact">
+    <section class="main-contact scroll-spy">
       <div class="parallax lg-only">
         <div class="background" aria-hidden="true">
           <div class="floating floating-01">
@@ -401,10 +398,10 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="contact">
-                <h2 class="title">
+                <h2 class="title back-to-position to-top delay-0">
                   Contact
                 </h2>
-                <div class="contact-form">
+                <div class="contact-form back-to-position to-top delay-1">
                   <div class="contact-form-info lg-only">
                     <div class="info">
                       <div class="p-number">
@@ -446,10 +443,10 @@
                     </div>
                   </form>
                 </div>
-                <p class="copyright sm-only">
+                <p class="copyright sm-only back-to-position to-top delay-2">
                   JOHYEJIN © 2022 PORTFOLIO
                 </p>
-                <p class="copyright sm-hidden">
+                <p class="copyright sm-hidden back-to-position to-top delay-2">
                   Copyright 2022. <br class="sm-only" /> Web publisher portfolio-- by Hye Jin
                 </p>
               </div>

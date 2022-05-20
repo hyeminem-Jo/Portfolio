@@ -3,10 +3,10 @@
   background-color: #fff;
 
   .portfolio {
-    &-list:first-child {
-      padding-top: 30px;
+    .title {
+      padding-bottom: 30px;
     }
-
+    
     &-item {
       position: relative;
       margin-bottom: 70px;

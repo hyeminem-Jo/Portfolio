@@ -101,7 +101,6 @@ gsap.utils.toArray('.background').forEach((background, i) => {
       ease: "none",
       scrollTrigger: {
         trigger: background,
-        // start: "top top", 
         end: "bottom top",
         scrub: true
       }
@@ -158,13 +157,25 @@ $('.popup-item .btn-close, .popup + .overlay').click(function () {
 if (window.innerWidth <= 375) {
   $('.contact-form textarea').attr("rows", "5")
 } else if (window.innerWidth > 375) {
-  $('.contact-form textarea').attr("rows", "10")
+  $('.contact-form textarea').attr("rows", "8")
 }
 
 $(window).resize(function () {
   if (window.innerWidth <= 375) {
     $('.contact-form textarea').attr("rows", "5")
   } else if (window.innerWidth > 375) {
-    $('.contact-form textarea').attr("rows", "10")
+    $('.contact-form textarea').attr("rows", "8")
   }
 })
+
+// 스크롤 위치 계산 애니메이션
+const spyEls = document.querySelectorAll("section.scroll-spy");
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic.Scene({
+      triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+      triggerHook: 0.7,
+      // viewport height 를 기준으로 맨 위가 0, 맨 밑이 1로 인식, 0.8이면 맨밑에서 조금 올라온 지점을 뜻함
+    })
+    .setClassToggle(spyEl, "show")
+    .addTo(new ScrollMagic.Controller());
+});
