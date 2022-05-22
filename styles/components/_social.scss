@@ -3,6 +3,21 @@
   bottom: 10%;
   left: 10%;
   z-index: $social-level;
+  overflow: hidden;
+  // border: 1px solid white;
+
+  &-list {
+    // border: 1px solid red;
+    transform: translate3d(-100%, 0, 0);
+    animation: ani4 1s 1s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes ani4 {
+    100% {
+      transform: translate3d(0px, 0, 0);
+    }
+  }
 
   &-item {
     a {

@@ -23,19 +23,47 @@
     margin-top: 50px;
     text-align: center;
     color: white;
+    // border: 1px solid white;
+    overflow: hidden;
 
     h1 {
+      // hi, I'm Hyejin :)
+      // border: 1px solid;
       width: 70%;
       margin: 0 auto;
       transform: translateY(30px);
       font-size: 60px;
       line-height: 1.2em;
+      overflow: hidden;
+      animation: ani1 1s;
+      white-space: nowrap;
+      text-align: left;
     }
 
     h2 {
+      // web publisher portfolio
       font-size: 25px;
       margin-top: 50px;
       opacity: 0.4;
+      // border: 1px solid;
+      animation: ani2 .8s .5s;
+      animation-fill-mode: both;
+      transform: translateY(100%)
+    }
+
+    @keyframes ani1 {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 70%;
+      }
+    }
+
+    @keyframes ani2 {
+      100% {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -98,11 +126,22 @@
       h1 {
         width: 100%;
         font-size: 80px;
+        animation: ani1 1s;
       }
 
       h2 {
         font-size: 40px;
         text-align: left;
+      }
+
+      @keyframes ani1 {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 100%;
+        }
       }
     }
   }
