@@ -2,14 +2,21 @@
   position: absolute;
   bottom: 10%;
   left: 10%;
+  z-index: $social-level;
 
   &-item {
     a {
       @include flexbox;
       color: #fff;
-      width: 50px;
-      height: 50px;
-      font-size: 26px;
+      width: 52px;
+      height: 52px;
+      font-size: 27px;
+      transition: 0.3s;
+
+      &:active,
+      &:hover {
+        color: #f9e400;
+      }
     }
   }
 

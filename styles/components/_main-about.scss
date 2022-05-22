@@ -113,6 +113,11 @@
       span {
         display: block;
         margin-top: 30px;
+
+        b {
+          margin-right: 10px;
+          background-color: rgba(255, 244, 118, 0.7);
+        }
       }
     }
   }
@@ -191,6 +196,12 @@
           margin-top: 40px;
           font-size: 20px;
           font-weight: 500;
+        }
+
+        span {
+          b {
+            font-size: 20px;
+          }
         }
       }
     }
