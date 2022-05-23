@@ -32,7 +32,10 @@
   transition-delay: 1.3s;
 }
 .show .back-to-position.delay-6 {
-  transition-delay: 1.3s;
+  transition-delay: 1.5s;
+}
+.show .back-to-position.delay-7 {
+  transition-delay: 1.7s;
 }
 
 * {
@@ -274,15 +277,31 @@ address {
   position: absolute;
   bottom: 10%;
   left: 10%;
+  z-index: 10;
+  overflow: hidden;
+}
+.social-list {
+  transform: translate3d(-100%, 0, 0);
+  animation: ani4 1s 1s;
+  animation-fill-mode: both;
+}
+@keyframes ani4 {
+  100% {
+    transform: translate3d(0px, 0, 0);
+  }
 }
 .social-item a {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  width: 50px;
-  height: 50px;
-  font-size: 26px;
+  width: 52px;
+  height: 52px;
+  font-size: 27px;
+  transition: 0.3s;
+}
+.social-item a:active, .social-item a:hover {
+  color: #f9e400;
 }
 @media screen and (min-width: 1200px) {
   .social {
@@ -317,6 +336,7 @@ address {
   margin-top: 50px;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 .visual-content .heading h1 {
   width: 70%;
@@ -324,11 +344,31 @@ address {
   transform: translateY(30px);
   font-size: 60px;
   line-height: 1.2em;
+  overflow: hidden;
+  animation: ani1 1s;
+  white-space: nowrap;
+  text-align: left;
 }
 .visual-content .heading h2 {
   font-size: 25px;
   margin-top: 50px;
   opacity: 0.4;
+  animation: ani2 0.8s 0.5s;
+  animation-fill-mode: both;
+  transform: translateY(100%);
+}
+@keyframes ani1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes ani2 {
+  100% {
+    transform: translateY(0);
+  }
 }
 .visual-content .page-down {
   position: absolute;
@@ -385,10 +425,19 @@ address {
   .visual-content .heading h1 {
     width: 100%;
     font-size: 80px;
+    animation: ani1 1s;
   }
   .visual-content .heading h2 {
     font-size: 40px;
     text-align: left;
+  }
+  @keyframes ani1 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
@@ -509,6 +558,10 @@ address {
   display: block;
   margin-top: 30px;
 }
+.main-about .profile-desc span b {
+  margin-right: 10px;
+  background-color: rgba(255, 244, 118, 0.7);
+}
 @media screen and (min-width: 768px) {
   .main-about .profile {
     flex-direction: row;
@@ -564,6 +617,9 @@ address {
     margin-top: 40px;
     font-size: 20px;
     font-weight: 500;
+  }
+  .main-about .profile-desc span b {
+    font-size: 20px;
   }
 }
 
@@ -1002,7 +1058,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .popup {
-    height: 750px;
+    height: 650px;
     width: 80%;
   }
   .popup-item {
@@ -1488,8 +1544,18 @@ address {
     background-color: #fff;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.087);
   }
+  .global-header .gnb {
+    overflow: hidden;
+  }
   .global-header .gnb-list {
-    transform: translateX(50px);
+    transform: translate3d(50px, -100%, 0);
+    animation: ani3 1s 1s;
+    animation-fill-mode: both;
+  }
+  @keyframes ani3 {
+    100% {
+      transform: translate3d(50px, 0, 0);
+    }
   }
 }
 
